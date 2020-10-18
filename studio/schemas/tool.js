@@ -8,8 +8,8 @@ export default {
   fields: [
     // ... other fields ...
     {
-      name: 'tool',
-      title: 'Tool',
+      name: 'name',
+      title: 'Name',
       type: 'string',
     },
     {
