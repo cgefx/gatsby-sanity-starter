@@ -10,6 +10,7 @@ export default function ProjectsPage({ data }) {
       {projects.map(project => (
         <div>
           <h1>{project.name}</h1>
+          {project.image && <GatsbyImage fluid={project.image.asset.fluid} />}
           <div style={{ display: 'flex' }}>
             {project.techTags.map(tag => (
               <div style={{ display: 'flex' }}>
@@ -32,6 +33,13 @@ export const query = graphql`
         name
         description
         featured
+        image {
+          asset {
+            fluid {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
         repoLink
         liveLink
         slug {
