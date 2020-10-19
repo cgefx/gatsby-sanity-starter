@@ -24,5 +24,11 @@ module.exports = {
         token: process.env.MY_SANITY_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/styles/typography`,
+      },
+    },
   ],
 }
