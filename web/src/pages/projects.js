@@ -1,52 +1,53 @@
 import React from 'react'
-import {graphql} from 'gatsby'
-import GatsbyImage from 'gatsby-image';
+import { graphql } from 'gatsby'
+import GatsbyImage from 'gatsby-image'
 
-export default function ProjectsPage({data}) {
-	const projects = data.projects.nodes;
+export default function ProjectsPage({ data }) {
+  const projects = data.projects.nodes
 
-		return (
-			<div>
-				{
-					projects.map((project) => (
-						<div>
-							<h1>{project.name}</h1>
-							<div>
-								{project.tools.map((tool) => (
-									<div>
-
-									<div>{tool.name}</div>
-									<GatsbyImage fixed={tool.image.asset.fixed} />
-									</div>
-								))}
-							</div>
-							<p>{project.description}</p>
-						</div>
-					))
-					}
-			</div>
-		)
-
+  return (
+    <div>
+      {projects.map(project => (
+        <div>
+          <h1>{project.name}</h1>
+          <div style={{ display: 'flex' }}>
+            {project.techTags.map(tag => (
+              <div style={{ display: 'flex' }}>
+                <div>{tag.name}</div>
+                <GatsbyImage fixed={tag.image.asset.fixed} />
+              </div>
+            ))}
+          </div>
+          <p>{project.description}</p>
+        </div>
+      ))}
+    </div>
+  )
 }
 
-
 export const query = graphql`
-	query MyQuery {
-  projects: allSanityProject {
-    nodes {
-      name
-      description
-      tools {
+  query MyQuery {
+    projects: allSanityProject {
+      nodes {
         name
-        image {
-          asset {
-            fixed (width: 32) {
-              ...GatsbySanityImageFixed
+        description
+        featured
+        repoLink
+        liveLink
+        slug {
+          current
+        }
+        techTags {
+          name
+          image {
+            asset {
+              fixed(width: 32) {
+                ...GatsbySanityImageFixed
+              }
             }
           }
         }
       }
     }
   }
-}
 `

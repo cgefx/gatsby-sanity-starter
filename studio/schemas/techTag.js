@@ -1,12 +1,11 @@
 import { FaTools as icon } from 'react-icons/fa';
 
 export default {
-  name: 'tool',
-  title: 'Tool',
+  name: 'techTag',
+  title: 'Tech Tag',
   icon,
   type: 'document',
   fields: [
-    // ... other fields ...
     {
       name: 'name',
       title: 'Name',
