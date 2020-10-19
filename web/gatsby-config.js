@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Gibson.codes`,
-    description: `The personal portfolio of Colin Gibson, a software engineer.`,
+    description: `The personal portfolio of software engineer, Colin Gibson`,
     author: `@cgefx`,
   },
   plugins: [
