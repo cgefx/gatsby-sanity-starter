@@ -78,7 +78,7 @@ export default class Hero extends React.Component {
                 }}
               />
             </Type>
-            <StyledLink href="./">Download Resume</StyledLink>
+            <StyledLink href="./">Get In Touch</StyledLink>
           </HeadingBox>
           <Shapes />
         </Overlay>

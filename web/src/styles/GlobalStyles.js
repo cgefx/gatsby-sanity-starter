@@ -26,8 +26,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
   html {
-	//100% = 16px;
-	font-size: 62.5%; // 1rem = 10px
+		font-size: 62.5%; // 1rem = 10px
   }
   body {
 		font-size: 2rem;
@@ -36,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 	#___gatsby {
-  overflow-x: hidden;
+  	overflow-x: hidden;
 }
 `
 

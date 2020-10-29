@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap'
 export const NavItem = styled.button`
   background: none;
   border: none;
-  color: #fff;
+  color: white;
   text-transform: capitalize;
   font-weight: 500;
   margin: 10px 5px;
@@ -70,6 +70,7 @@ export const LogoWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
   @media (max-width: 500px) {
     flex: 0 0 100%;
     max-width: 100%;
@@ -80,7 +81,6 @@ export const LogoWrapper = styled.div`
 export const Logo = styled.img`
   height: 70px;
   width: 100%;
-  /* height: 40%; */
   @media (max-width: 1023px) {
     height: 30px;
   }
@@ -91,7 +91,7 @@ export const NavInner = styled.div`
 `
 
 export const Toggler = styled.button`
-  color: #fff;
+  color: white;
   position: absolute;
   right: 0;
   top: 0;
