@@ -4,13 +4,12 @@ import { Container } from 'react-bootstrap'
 export const NavItem = styled.button`
   background: none;
   border: none;
-  color: white;
   text-transform: capitalize;
   font-weight: 500;
   margin: 10px 5px;
   transition: 0.5s;
   &:hover {
-    color: #04e5e5;
+    color: var(--blue);
   }
   &:focus {
     outline: none;
@@ -46,6 +45,38 @@ export const NavbarContainer = styled(Container)`
   }
 `
 
+export const LogoWrapper = styled.div`
+  flex: 0 0 20%;
+  max-width: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (max-width: 500px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+`
+
+export const Logo = styled.img`
+  height: 40px;
+  /* width: 100%; */
+  @media (max-width: 1023px) {
+    height: 30px;
+  }
+`
+
+export const Toggler = styled.button`
+  /* color: white; */
+  position: absolute;
+  right: 0;
+  top: 0;
+  @media (min-width: 500px) {
+    display: none;
+  }
+`
+
 export const Nav = styled.nav`
   flex: 0 0 80%;
   max-width: 80%;
@@ -64,38 +95,6 @@ export const Nav = styled.nav`
   }
 `
 
-export const LogoWrapper = styled.div`
-  flex: 0 0 20%;
-  max-width: 20%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  @media (max-width: 500px) {
-    flex: 0 0 100%;
-    max-width: 100%;
-    justify-content: center;
-  }
-`
-
-export const Logo = styled.img`
-  height: 70px;
-  width: 100%;
-  @media (max-width: 1023px) {
-    height: 30px;
-  }
-`
-
 export const NavInner = styled.div`
   justify-content: flex-end;
-`
-
-export const Toggler = styled.button`
-  color: white;
-  position: absolute;
-  right: 0;
-  top: 0;
-  @media (min-width: 500px) {
-    display: none;
-  }
 `
