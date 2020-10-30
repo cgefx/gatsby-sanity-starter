@@ -2,23 +2,21 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 		:root {
-		--gradient: linear-gradient(
-			120deg,
-			#04e5e5,
-			#f37055,
-			#ef4e7b,
-			#a166ab,
-			#5073b8,
-			#1098ad,
-			#07b39b,
-			#6fba82
-		);
-	}
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-  }
+			--blue: #04e5e5;
+			--grey: #ccc;
+			--white: #fff;
+			--gradient: linear-gradient(
+				120deg,
+				#04e5e5,
+				#f37055,
+				#ef4e7b,
+				#a166ab,
+				#5073b8,
+				#1098ad,
+				#07b39b,
+				#6fba82
+			);
+		}
   *,
   html,
   body {
@@ -31,12 +29,19 @@ const GlobalStyles = createGlobalStyle`
   body {
 		font-size: 2rem;
 		background-color: #000;
+		color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-	#___gatsby {
-  	overflow-x: hidden;
-}
+	button {
+		color: inherit;
+		cursor: pointer;
+	}
+
+	a {
+		color: inherit;
+	}
+
 `
 
 export default GlobalStyles
