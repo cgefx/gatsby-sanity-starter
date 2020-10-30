@@ -1,13 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import SEO from '../components/SEO'
-import Hero from '../components/Sections/Hero'
+import Hero from '../components/Hero'
+import About from '../components/About'
 
 const IndexPage = () => (
   <>
     <SEO title="Home" />
     <Hero />
-    <Link to="/projects/">Go to Projects</Link> <br />
+    <About />
+    {/* <Link to="/projects/">Go to Projects</Link> <br /> */}
   </>
 )
 
