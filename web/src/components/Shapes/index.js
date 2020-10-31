@@ -22,7 +22,7 @@ const MoveDown = keyframes`
 
 const Shape = styled.img`
   position: absolute;
-  height: 50px;
+  height: 5rem;
   &.move-up {
     animation: ${MoveUp} 3s infinite alternate;
   }
@@ -30,7 +30,7 @@ const Shape = styled.img`
     animation: ${MoveDown} 3s infinite alternate;
   }
   @media (max-width: 767px) {
-    height: 20px;
+    height: 2rem;
   }
 `
 
