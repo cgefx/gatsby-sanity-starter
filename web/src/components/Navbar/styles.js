@@ -6,7 +6,7 @@ export const NavItem = styled.button`
   border: none;
   text-transform: capitalize;
   font-weight: 500;
-  margin: 10px 5px;
+  margin: 1rem 0.5rem;
   transition: 0.5s;
   &:hover {
     color: var(--blue);
@@ -16,7 +16,7 @@ export const NavItem = styled.button`
   }
   @media (min-width: 501px) and (max-width: 1023px) {
     font-size: 11px;
-    margin: 2px;
+    margin: 0.2rem;
   }
 `
 
@@ -24,14 +24,14 @@ export const NavbarWrapper = styled.div`
   position: absolute;
   z-index: 1;
   width: 100%;
-  padding: 20px 0;
+  padding: 2rem 0;
   z-index: 100;
   &.sticky {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 0 0;
+    background-color: var(--overlay-black-dark);
+    padding: 0;
     @media (max-width: 500px) {
-      padding: 20px 0;
+      padding: 2rem 0;
     }
   }
 `
@@ -60,15 +60,13 @@ export const LogoWrapper = styled.div`
 `
 
 export const Logo = styled.img`
-  height: 40px;
-  /* width: 100%; */
+  height: 4rem;
   @media (max-width: 1023px) {
-    height: 30px;
+    height: 3rem;
   }
 `
 
 export const Toggler = styled.button`
-  /* color: white; */
   position: absolute;
   right: 0;
   top: 0;
@@ -87,8 +85,8 @@ export const Nav = styled.nav`
     flex: 0 0 100%;
     max-width: 100%;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    margin-top: 20px;
+    background-color: var(--overlay-black-dark);
+    margin-top: 2rem;
     &.hidden_mobile {
       display: none;
     }
