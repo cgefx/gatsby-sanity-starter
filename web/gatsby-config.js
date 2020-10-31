@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-sass',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -22,12 +23,6 @@ module.exports = {
         projectId: 'zj3d43kj',
         dataset: 'production',
         token: process.env.MY_SANITY_TOKEN,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/styles/typography`,
       },
     },
   ],
