@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { FaReact } from 'react-icons/fa'
 import {
   SiJavascript,
@@ -61,8 +60,8 @@ export default function SkillsGrid() {
     <Container>
       <Heading className="active">Skills</Heading>
       <Grid>
-        {skills.map(name => (
-          <Skill text={name} />
+        {skills.map((name, i) => (
+          <Skill key={`${name}-${i}`} text={name} />
         ))}
       </Grid>
     </Container>
