@@ -1,8 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Row, Col } from 'react-bootstrap'
 import {
   Section,
+  StyledRow,
+  RightCol,
   AboutContainer,
   LeftCol,
   ImageContainer,
@@ -29,13 +30,13 @@ export default function About() {
   return (
     <Section id="about">
       <AboutContainer>
-        <Row>
+        <StyledRow>
           <LeftCol md={6}>
             <ImageContainer>
               <Image src={image.childImageSharp.fluid.src} alt="about" />
             </ImageContainer>
           </LeftCol>
-          <Col md={6}>
+          <RightCol md={6}>
             <Heading>About Me</Heading>
             <Separator />
             <Text>
@@ -47,8 +48,8 @@ export default function About() {
               exceptional websites, applications, and everything in between.
             </Text>
             <SkillsGrid />
-          </Col>
-        </Row>
+          </RightCol>
+        </StyledRow>
       </AboutContainer>
     </Section>
   )
