@@ -27,11 +27,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
-  min-height: 400px;
-  margin-top: 20px;
+  min-height: 40rem;
+  margin-top: 2rem;
   @media (max-width: 767px) {
-    margin-top: 50px;
+    margin-top: 5rem;
     /* padding: 0 20px; */
   }
 `
