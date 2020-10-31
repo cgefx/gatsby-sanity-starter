@@ -2,7 +2,6 @@
 import React from 'react'
 import { FaBars } from 'react-icons/fa'
 import logo from '../../images/logo.svg'
-
 import {
   NavItem,
   NavbarWrapper,
@@ -53,7 +52,6 @@ class Navbar extends React.Component {
   }
 
   collapseNav() {
-    console.log(this.state, 'col')
     if (!this.state.collapse) {
       this.setState({ collapse: true })
     } else {
