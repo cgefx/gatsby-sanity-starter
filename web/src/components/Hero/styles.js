@@ -1,20 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import bg from '../../images/background-poly.jpg'
 
-export const Section = styled.section`
-  position: relative;
-  background-image: url(${bg});
-  background-size: cover;
-  background-repeat: no-repeat;
-`
-
-export const Overlay = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-`
-
 const gradientAnimation = keyframes`
 			0% {
 				background-position: 15% 0%;
@@ -27,9 +13,23 @@ const gradientAnimation = keyframes`
 			}
 		`
 
+export const Section = styled.section`
+  position: relative;
+  background-image: url(${bg});
+  background-size: cover;
+  background-repeat: no-repeat;
+`
+
+export const Overlay = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--overlay-black);
+`
+
 export const HeadingBox = styled.div`
-  height: 500px;
-  width: 900px;
+  height: 50rem;
+  width: 90rem;
   margin: auto;
   position: relative;
   display: flex;
@@ -64,7 +64,7 @@ export const HeadingBox = styled.div`
     animation: ${gradientAnimation} 2s ease-in-out infinite;
   }
   @media (max-width: 767px) {
-    height: 350px;
+    height: 35rem;
   }
 `
 
@@ -113,10 +113,10 @@ export const StyledLink = styled.a`
   border-bottom: 2px solid;
   font-weight: 300;
   transition: 0.5s;
-  margin-top: 40px;
+  margin-top: 4rem;
   &:hover {
     /* color: #fff; */
     text-decoration: none;
-    border-color: #04e5e5;
+    border-color: var(--blue);
   }
 `
