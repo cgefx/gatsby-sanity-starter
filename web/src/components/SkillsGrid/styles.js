@@ -27,7 +27,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 40rem;
+
   margin-top: 2rem;
   @media (max-width: 767px) {
     margin-top: 5rem;
