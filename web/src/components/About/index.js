@@ -13,6 +13,7 @@ import {
   Text,
 } from './styles'
 import SkillsGrid from '../SkillsGrid'
+import { StyledH1 } from '../_shared/styled-headings'
 
 export default function About() {
   const { image } = useStaticQuery(graphql`
@@ -37,8 +38,7 @@ export default function About() {
             </ImageContainer>
           </LeftCol>
           <RightCol md={6}>
-            <Heading>About Me</Heading>
-            <Separator />
+            <StyledH1>About Me</StyledH1>
             <Text>
               Los Angeles, CA based engineer currently focused on building
               exceptional websites, applications, and everything in between.
