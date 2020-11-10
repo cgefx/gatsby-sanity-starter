@@ -16,18 +16,16 @@ export const gradientAnimation = keyframes`
 export const Section = styled.section`
   position: relative;
   overflow: hidden;
-  background-color: var(--black);
   padding: 10rem 0;
 `
 
 export const StyledContainer = styled(Container)``
 
 export const FormRow = styled(Row)`
-  background-color: var(--dark-grey);
+  background-color: var(--bg-content-color);
 `
 
 export const ContactCol = styled(Col)`
-  /* min-height: 60rem; */
   max-height: 60rem;
   padding: 0;
   display: flex;

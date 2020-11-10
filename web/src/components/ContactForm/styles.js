@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 
 const ErrorInputAnimation = keyframes`
 			0% {
-				border-bottom: 1px solid var(--dark-grey);
+				border-bottom: 1px solid var(--bg-content-color);
 			}
 			100% {
 				border-bottom: 1px solid var(--red);
@@ -25,7 +25,7 @@ export const Separator = styled.div`
   width: 5rem;
   margin-bottom: 3rem;
   margin-left: 0.6rem;
-  background-color: var(--blue);
+  background-color: var(--primary-color);
 `
 
 export const InputElement = styled.div`
@@ -37,13 +37,13 @@ export const Input = styled.input`
   border: none;
   padding: 1rem 0.5rem;
   border-radius: 0;
-  color: var(--white);
+  color: var(--title-color);
   transition: 0.5s;
-  border-bottom: 1px solid var(--med-grey);
-  background-color: var(--dark-grey);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-content-color);
   &:focus {
     outline: none;
-    border-bottom: 1px solid var(--blue);
+    border-bottom: 1px solid var(--primary-color);
   }
   &.error {
     animation: ${ErrorInputAnimation} 1s forwards;
@@ -52,19 +52,19 @@ export const Input = styled.input`
 
 export const Textarea = styled.textarea`
   width: 100%;
-  background-color: var(--dark-grey);
+  background-color: var(--bg-content-color);
   border: none;
   padding: 1rem 0.5rem;
   border-radius: 0;
-  color: var(--white);
+  color: var(--title-color);
   transition: all 0.5s ease 0s;
   min-height: 10rem;
   margin-top: 0;
   margin-bottom: 0;
-  border-bottom: 1px solid var(--med-grey);
+  border-bottom: 1px solid var(--border-color);
   height: 100px;
   &:focus {
-    border-bottom: 1px solid var(--blue);
+    border-bottom: 1px solid var(--primary-color);
     outline: none;
   }
 `
@@ -79,7 +79,7 @@ export const Submit = styled.button`
   transition: 0.5s;
   background-color: var(--black);
   &:hover {
-    background: var(--med-grey);
+    background: var(--border-color);
   }
   span {
     position: relative;
