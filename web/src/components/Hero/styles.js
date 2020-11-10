@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import bg from '../../images/background-poly.jpg'
+import { flexCenter } from '../_shared/styled-mixins'
 
 const gradientAnimation = keyframes`
 			0% {
@@ -44,9 +45,10 @@ export const HeadingBox = styled.div`
     right: 0;
     bottom: 0;
     border-radius: 5px;
-    background: var(--gradient);
+    /* background: var(--gradient); */
+    background: var(--primary-color);
     background-size: 300% 300%;
-    --width: 5px;
+    --width: 3px;
     clip-path: polygon(
       0% 100%,
       var(--width) 100%,
@@ -71,7 +73,7 @@ export const HeadingBox = styled.div`
 export const SubHeading = styled.h2`
   font-size: 18px;
   font-weight: 300;
-  color: var(--grey);
+  color: var(--body-color);
   text-transform: uppercase;
   letter-spacing: 4px;
 `
@@ -91,7 +93,6 @@ export const Heading = styled.div`
 export const Type = styled.div`
   font-size: 50px;
   line-height: 50px;
-  /* color: #fff; */
   text-transform: uppercase;
   margin-left: 6px;
   @media (min-width: 768px) and (max-width: 1500px) {
@@ -108,15 +109,13 @@ export const Type = styled.div`
 `
 
 export const StyledLink = styled.a`
-  /* color: #fff; */
   text-decoration: none;
   border-bottom: 2px solid;
   font-weight: 300;
   transition: 0.5s;
   margin-top: 4rem;
   &:hover {
-    /* color: #fff; */
     text-decoration: none;
-    border-color: var(--blue);
+    border-color: var(--primary-color);
   }
 `
