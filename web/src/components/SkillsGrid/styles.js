@@ -61,7 +61,6 @@ export const Grid = styled.div`
 export const SkillContainer = styled.div`
   margin-bottom: 2.5rem;
   display: flex;
-  /* justify-content: flex-end; */
   align-items: flex-end;
 `
 
@@ -71,14 +70,14 @@ export const IconWrapper = styled.div`
 
   > svg {
     height: 100%;
-    animation: ${ColorAnimation} 10s infinite alternate;
+    /* animation: ${ColorAnimation} 10s infinite alternate; */
+    fill: var(--primary-color);
   }
 `
 
 export const Text = styled.p`
   font-size: 16px;
   text-transform: capitalize;
-  color: var(--grey);
   font-weight: bold;
   margin-left: 0.8rem;
   margin-bottom: 0.2rem;

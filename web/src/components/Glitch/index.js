@@ -4,8 +4,8 @@ import './styles.scss'
 
 export default function Glitch({ text }) {
   return (
-    <p className="glitch" data-text={text}>
+    <div className="glitch" data-text={text}>
       {text}
-    </p>
+    </div>
   )
 }

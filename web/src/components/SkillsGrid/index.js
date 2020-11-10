@@ -58,7 +58,6 @@ function Skill({ text }) {
 export default function SkillsGrid() {
   return (
     <Container>
-      <Heading className="active">Skills</Heading>
       <Grid>
         {skills.map((name, i) => (
           <Skill key={`${name}-${i}`} text={name} />

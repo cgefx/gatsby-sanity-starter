@@ -25,37 +25,3 @@ export default function ProjectsPage({ data }) {
     </div>
   )
 }
-
-export const query = graphql`
-  query MyQuery {
-    projects: allSanityProject {
-      nodes {
-        name
-        description
-        featured
-        image {
-          asset {
-            fluid {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        repoLink
-        liveLink
-        slug {
-          current
-        }
-        techTags {
-          name
-          image {
-            asset {
-              fixed(width: 32) {
-                ...GatsbySanityImageFixed
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`

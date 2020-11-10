@@ -4,6 +4,7 @@ import React from 'react'
 import Typewriter from 'typewriter-effect'
 import Glitch from '../Glitch'
 import Shapes from '../Shapes'
+
 import {
   Section,
   HeadingBox,

@@ -9,7 +9,7 @@ export const NavItem = styled.button`
   margin: 1rem 0.5rem;
   transition: 0.5s;
   &:hover {
-    color: var(--blue);
+    color: var(--primary-color);
   }
   &:focus {
     outline: none;

@@ -18,7 +18,7 @@ const AnimatedShadow = keyframes`
 export const Section = styled.section`
   position: relative;
   overflow: hidden;
-  background-color: var(--darkest-grey);
+  background-color: var(--bg-color-light);
   padding-top: 5rem;
   @media (max-width: 767px) {
     padding: 8rem 2rem;
@@ -50,7 +50,8 @@ export const RightCol = styled(Col)``
 export const ImageContainer = styled.div`
   border-radius: 20px;
   overflow: hidden;
-  animation: ${AnimatedShadow} 10s infinite alternate;
+  box-shadow: 0 28px 60px rgba(80, 115, 184, 0.5);
+  /* animation: ${AnimatedShadow} 10s infinite alternate; */
   @media (max-width: 767px) {
     margin-bottom: 5rem;
   }
@@ -66,22 +67,4 @@ export const Image = styled.img`
   }
 `
 
-export const Heading = styled.h2`
-  font-size: 5.6rem;
-  color: var(--white);
-  line-height: 5rem;
-`
-
-export const Separator = styled.div`
-  height: 0.5rem;
-  width: 5rem;
-  background-color: var(--blue);
-  margin: 20px 0;
-`
-
-export const Text = styled.p`
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--grey);
-  margin-bottom: 0.3;
-`
+export const Text = styled.p``
