@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 		:root {
+
 			--primary-color: rgb(80, 115, 184);
 			${'' /* --primary-color: #04e5e5; */}
 			--secondary-color: #f18731;
@@ -25,7 +26,6 @@ const GlobalStyles = createGlobalStyle`
 			--transition-fast: 0.2s;
 			--transition-normal: 0.4s;
 			--transition-slow: 0.6s;
-			${'' /* original */}
 			--gradient: linear-gradient(
 				120deg,
 				#04e5e5,
@@ -62,10 +62,10 @@ const GlobalStyles = createGlobalStyle`
 	a {
 		color: inherit;
 
-		${'' /* &:not(.button) {
+		&:not(.button) {
 			text-decoration: none;
 			color: var(--primary-color);
-		} */}
+		}
 
 		&.active {
 			color: var(--primary-color);
