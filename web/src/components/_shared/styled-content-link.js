@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
-export const StyledContentLink = styled.a`
+export const StyledContentLink = styled(Link)`
   text-decoration: none;
 
   &:hover > * {
