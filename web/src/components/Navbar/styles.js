@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
+import { Link } from 'gatsby'
+
+export const StyledHomeLink = styled(Link)`
+  text-decoration: none;
+`
 
 export const NavItem = styled.button`
   background: none;

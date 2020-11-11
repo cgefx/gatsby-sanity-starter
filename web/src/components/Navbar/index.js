@@ -5,6 +5,7 @@ import logo from '../../images/logo.svg'
 import {
   NavItem,
   NavbarWrapper,
+  StyledHomeLink,
   NavbarContainer,
   Nav,
   LogoWrapper,
@@ -87,7 +88,9 @@ class Navbar extends React.Component {
       >
         <NavbarContainer>
           <LogoWrapper className="logo">
-            <Logo src={logo} alt="logo" />
+            <StyledHomeLink to="/">
+              <Logo src={logo} alt="logo" />
+            </StyledHomeLink>
           </LogoWrapper>
           <Toggler
             onClick={() => this.collapseNav()}

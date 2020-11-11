@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import GlobalStyles from '../../styles/GlobalStyles'
 import Typography from '../../styles/Typography'
 import Navbar from '../Navbar'
+import Footer from '../Footer'
 
 const sections = ['about', 'work', 'contact']
 
@@ -13,7 +14,7 @@ const Layout = ({ children }) => (
     <Typography />
     <Navbar sections={sections} />
     <main>{children}</main>
-    {/* <Footer /> */}
+    <Footer />
   </>
 )
 

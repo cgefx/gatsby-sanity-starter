@@ -8,8 +8,6 @@ import {
   LeftCol,
   ImageContainer,
   Image,
-  Separator,
-  Heading,
   Text,
 } from './styles'
 import SkillsGrid from '../SkillsGrid'
