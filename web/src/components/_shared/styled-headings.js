@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import line from '../../images/shapes/7.png'
 
 export const StyledH1 = styled.h1`
   width: 100%;
@@ -11,13 +12,17 @@ export const StyledH1 = styled.h1`
   } */
 
   &:after {
-    background-color: var(--primary-color);
-    content: '';
+    /* background-color: var(--primary-color); */
+    /* content: '';
+    background-image: url(${line});
+    background-repeat: no-repeat;
+    background-position: center 100%;
+
     position: absolute;
     top: -30px;
     left: 0;
-    width: 30px;
-    height: 2px;
+    width: 100%;
+    height: 10px; */
   }
 `
 
