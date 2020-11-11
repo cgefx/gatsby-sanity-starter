@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+
 import GatsbyImage from 'gatsby-image'
 
 export default function ProjectsPage({ data }) {
