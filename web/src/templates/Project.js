@@ -5,6 +5,8 @@ import Img from 'gatsby-image'
 // import { blogMenuLinks } from '../components/_config/menu-links';
 import { StyledH1 } from '../components/_shared/styled-headings'
 import { StyledSection } from '../components/_shared/styled-section'
+import BlockContent from '../components/BlockContent'
+import { StyledImageContainer } from '../components/_shared/styled-image-container'
 
 const StyledProjectSection = styled(StyledSection)`
   min-height: calc(100vh - var(--header-height));
@@ -28,13 +30,15 @@ const StyledProjectContent = styled.div`
 
 export default function ProjectPage({ data: { project } }) {
   console.log(project)
-  const coverImage = project.image ? project.image.asset.fluid : null
+  const coverImage = project.coverImage ? project.coverImage.asset.fluid : null
   return (
     <StyledProjectSection>
-      <StyledProjectTitle>{project.title}</StyledProjectTitle>
-      {coverImage && <Img fluid={coverImage} />}
+      <StyledImageContainer>
+        {coverImage && <Img fluid={coverImage} />}
+      </StyledImageContainer>
       <StyledProjectContent>
-        <p>{project.description}</p>
+        <StyledProjectTitle>{project.title}</StyledProjectTitle>
+        {project._rawBody && <BlockContent blocks={project._rawBody || []} />}
       </StyledProjectContent>
     </StyledProjectSection>
   )
@@ -45,18 +49,24 @@ export const query = graphql`
     project: sanityProject(slug: { current: { eq: $slug } }) {
       id
       title
-      description
-      techTags {
+      type
+      techStack {
         name
       }
+      excerpt
+      _rawBody
       repoLink
-      liveLink
-      image {
+      demoLink
+      coverImage {
         asset {
           fluid(maxWidth: 800) {
             ...GatsbySanityImageFluid
           }
         }
+      }
+      featured
+      slug {
+        current
       }
     }
   }

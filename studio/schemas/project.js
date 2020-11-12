@@ -1,4 +1,4 @@
-import { GoCircuitBoard as icon } from 'react-icons/go';
+import { GoCircuitBoard as icon } from 'react-icons/go'
 
 export default {
   name: 'project',
@@ -8,22 +8,18 @@ export default {
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Project Title',
+      type: 'string',
+      validation: Rule => Rule.required().min(1).max(80),
+    },
+    {
+      name: 'type',
+      title: 'Project Type',
       type: 'string',
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-    },
-    {
-      name: 'featured',
-      title: 'Featured',
-      type: 'boolean',
-    },
-    {
-      name: 'techTags',
-      title: 'Tech Tags',
+      name: 'techStack',
+      title: 'Tech Stack',
       type: 'array',
       of: [
         {
@@ -37,31 +33,49 @@ export default {
       ],
     },
     {
+      name: 'excerpt',
+      title: 'Short Excerpt',
+      type: 'text',
+      rows: 2,
+      validation: Rule => Rule.required().min(1).max(250),
+    },
+    {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+    },
+    {
       name: 'repoLink',
       title: 'Repo Link',
       type: 'url',
     },
     {
-      name: 'liveLink',
-      title: 'Live Link',
+      name: 'demoLink',
+      title: 'Demo Link',
       type: 'url',
     },
     {
-      name: 'image',
-      title: 'Image',
+      name: 'coverImage',
+      title: 'Cover Image',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
     {
+      name: 'featured',
+      title: 'Featured',
+      type: 'boolean',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'title',
         maxLength: 100,
       },
+      validation: Rule => Rule.required(),
     },
   ],
-};
+}

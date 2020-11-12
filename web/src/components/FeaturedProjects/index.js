@@ -19,12 +19,14 @@ import { StyledContentLink } from '../_shared/styled-content-link'
 
 export default function FeaturedProjects({ projects }) {
   const Projects = projects.map((project, index) => {
-    const coverImage = project.image ? project.image.asset.fluid : null
-    const link = `/project/${project.slug.current}`
+    const coverImage = project.coverImage
+      ? project.coverImage.asset.fluid
+      : null
+    const projectUrl = `/project/${project.slug.current}`
 
     return (
       <StyledFeaturedProject key={project.title + index}>
-        <Link to={link}>
+        <Link to={projectUrl}>
           {coverImage && (
             <StyledImageContainer hasHover>
               <Img fluid={coverImage} />
@@ -32,16 +34,16 @@ export default function FeaturedProjects({ projects }) {
           )}
         </Link>
         <StyledProjectInfoContainer>
-          <StyledContentLink to={link}>
+          <StyledContentLink to={projectUrl}>
             <StyledH2>{project.title}</StyledH2>
           </StyledContentLink>
           <StyledDescription>
-            <p>{project.description}</p>
+            <p>{project.excerpt}</p>
             <StyledLinkContainer>
-              <TextLink label="View Project" link={link} />
+              <TextLink label="View Project" link={projectUrl} />
             </StyledLinkContainer>
           </StyledDescription>
-          <TechList techs={project.techTags} />
+          <TechList techs={project.techStack} />
         </StyledProjectInfoContainer>
       </StyledFeaturedProject>
     )
