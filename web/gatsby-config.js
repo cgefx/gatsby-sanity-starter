@@ -25,5 +25,13 @@ module.exports = {
         token: process.env.MY_SANITY_TOKEN,
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 }

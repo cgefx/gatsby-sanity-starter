@@ -1,4 +1,4 @@
-import { FaTools as icon } from 'react-icons/fa';
+import { FaTools as icon } from 'react-icons/fa'
 
 export default {
   name: 'techTag',
@@ -17,4 +17,4 @@ export default {
       type: 'image',
     },
   ],
-};
+}

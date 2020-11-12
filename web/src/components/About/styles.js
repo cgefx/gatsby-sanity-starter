@@ -19,7 +19,7 @@ export const Section = styled.section`
   position: relative;
   overflow: hidden;
   background-color: var(--bg-color-light);
-  padding-top: 5rem;
+  padding: 6rem 0;
   @media (max-width: 767px) {
     padding: 8rem 2rem;
   }
@@ -31,7 +31,7 @@ export const Section = styled.section`
 export const AboutContainer = styled(Container)`
   padding: 10rem 0;
   @media (max-width: 500px) {
-    padding: 50rem 0;
+    padding: 5rem 0;
   }
 `
 

@@ -7,6 +7,7 @@ export const StyledImageContainer = styled.div`
 
   & .gatsby-image-wrapper * {
     transition: transform var(--transition-fast) ease-in-out !important;
+    border-radius: var(--radius);
   }
 
   &:hover .gatsby-image-wrapper * {

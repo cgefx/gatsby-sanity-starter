@@ -7,7 +7,7 @@ const MoveUp = keyframes`
 		transform: translateY(0);
 }
 100% {
-		transform: translateY(-40px);
+		transform: translateY(-10px);
 }
 `
 
@@ -16,11 +16,11 @@ const MoveDown = keyframes`
 		transform: translateY(0);
 }
 100% {
-		transform: translateY(40px);
+		transform: translateY(20px);
 }
 `
 
-const Shape = styled.img`
+const StyledShape = styled.img`
   position: absolute;
   height: 5rem;
   &.move-up {
@@ -57,7 +57,7 @@ export default function Shapes() {
   `)
 
   return shapes.edges.map((value, index) => (
-    <Shape
+    <StyledShape
       style={{
         left: `${(index + 1) * 10}%`,
         bottom: `${
