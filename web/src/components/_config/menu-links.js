@@ -10,16 +10,11 @@ export const indexMenuLinks = [
     icon: 'terminal',
   },
   {
-    name: 'Blog',
-    link: '/#blog',
-    icon: 'feather-alt',
-  },
-  {
     name: 'Contact',
     link: '/#contact',
     icon: 'envelope',
   },
-];
+]
 
 export const blogMenuLinks = [
   {
@@ -37,4 +32,4 @@ export const blogMenuLinks = [
     link: '/tags',
     icon: 'tags',
   },
-];
+]

@@ -2,9 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 		:root {
-
 			--primary-color: rgb(80, 115, 184);
-			${'' /* --primary-color: #04e5e5; */}
 			--secondary-color: #f18731;
 			--bg-color: #000;
 			--bg-color-light: #050505;
@@ -20,8 +18,8 @@ const GlobalStyles = createGlobalStyle`
 			--bright-blue: #00fff9;
 			--pink: #ff00c1;
 			--radius: 6px;
-			--space: 3.5rem;
-			--header-height: 80px;
+			--space: 7rem;
+			--header-height: 110px;
 			--content-width: 860px;
 			--transition-fast: 0.2s;
 			--transition-normal: 0.4s;

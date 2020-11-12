@@ -5,14 +5,22 @@ import GlobalStyles from '../../styles/GlobalStyles'
 import Typography from '../../styles/Typography'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
+import Header from '../Header'
+import { indexMenuLinks } from '../_config/menu-links'
 
 const sections = ['about', 'work', 'contact']
+
+if (typeof window !== 'undefined') {
+  // eslint-disable-next-line global-require
+  require('smooth-scroll')('a[href*="#"]')
+}
 
 const Layout = ({ children }) => (
   <>
     <GlobalStyles />
     <Typography />
-    <Navbar sections={sections} />
+    <Header menuLinks={indexMenuLinks} />
+    {/* <Navbar sections={sections} /> */}
     <main>{children}</main>
     <Footer />
   </>

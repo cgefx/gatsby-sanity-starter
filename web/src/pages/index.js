@@ -24,21 +24,8 @@ export const query = graphql`
     ) {
       nodes {
         title
-        description
-        featured
-        image {
-          asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        repoLink
-        liveLink
-        slug {
-          current
-        }
-        techTags {
+        excerpt
+        techStack {
           name
           image {
             asset {
@@ -47,6 +34,18 @@ export const query = graphql`
               }
             }
           }
+        }
+        repoLink
+        demoLink
+        coverImage {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+        slug {
+          current
         }
       }
     }

@@ -17,12 +17,14 @@ const gradientAnimation = keyframes`
 export const Section = styled.section`
   position: relative;
   background-image: url(${bg});
+
   background-size: cover;
   background-repeat: no-repeat;
 `
 
 export const Overlay = styled.div`
   width: 100%;
+
   display: flex;
   align-items: center;
   background-color: var(--overlay-black);
@@ -45,8 +47,8 @@ export const HeadingBox = styled.div`
     right: 0;
     bottom: 0;
     border-radius: 5px;
-    /* background: var(--gradient); */
-    background: var(--primary-color);
+    background: var(--gradient);
+    /* background: var(--primary-color); */
     background-size: 300% 300%;
     --width: 3px;
     clip-path: polygon(

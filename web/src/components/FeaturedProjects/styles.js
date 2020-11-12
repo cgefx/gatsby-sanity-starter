@@ -4,8 +4,8 @@ import { contentBox, flexCenter } from '../_shared/styled-mixins'
 export const StyledFeaturedProject = styled.article`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 5rem;
-  padding: 5rem 0;
+  grid-gap: 7rem;
+  padding: 4rem 0;
 
   @media screen and (min-width: 960px) {
     grid-template-columns: repeat(2, 1fr);
@@ -27,7 +27,7 @@ export const StyledProjectInfoContainer = styled.section`
 
 export const StyledLinkContainer = styled.section`
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   margin: 10px 0;
 
