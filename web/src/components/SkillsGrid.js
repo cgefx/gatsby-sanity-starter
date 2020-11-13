@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { FaReact } from 'react-icons/fa'
 import {
   SiJavascript,
@@ -9,15 +10,66 @@ import {
   SiStyledComponents,
   SiGit,
 } from 'react-icons/si'
+import { Fade, ColorAnimation } from './_shared/animation'
 
-import {
-  SkillContainer,
-  IconWrapper,
-  Text,
-  Container,
-  Heading,
-  Grid,
-} from './styles'
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin-top: 2rem;
+  @media (max-width: 767px) {
+    margin-top: 5rem;
+  }
+`
+
+const Heading = styled.h4`
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  border: none;
+  margin: 0 0 1.5rem 0;
+  transition: 0.5s;
+
+  &:focus {
+    outline: none;
+  }
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+`
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, minmax(10rem, 15rem));
+  gap: 0.5rem;
+  justify-items: start;
+  animation: ${Fade} 1s forwards;
+`
+const SkillContainer = styled.div`
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: flex-end;
+`
+
+const IconWrapper = styled.div`
+  height: 100%;
+  transition: 2s;
+
+  > svg {
+    height: 100%;
+    /* animation: ${ColorAnimation} 10s infinite alternate; */
+    fill: var(--primary-color);
+  }
+`
+
+const Text = styled.p`
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-left: 0.8rem;
+  margin-bottom: 0.2rem;
+`
 
 const skills = ['es6', 'firebase', 'gatsby', 'git', 'graphql', 'node', 'react']
 

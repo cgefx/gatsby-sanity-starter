@@ -1,9 +1,11 @@
+import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import Logo from '../../assets/logo.svg'
-import { mq } from '../_shared/media'
+import { StyledIndexNumber } from './_shared/styled-index-number'
+import Logo from '../assets/logo.svg'
+import { mq } from './_shared/media'
 
-export const StyledHeader = styled.header`
+const StyledHeader = styled.header`
   height: var(--header-height);
   flex-shrink: 0;
   background-color: transparent;
@@ -13,7 +15,7 @@ export const StyledHeader = styled.header`
   z-index: 1;
   width: 100%;
 `
-export const StyledContainer = styled.div`
+const StyledContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,10 +23,10 @@ export const StyledContainer = styled.div`
   width: 100%;
   padding: 0 calc((var(--space)));
 `
-export const StyledHomeLink = styled(Link)`
+const StyledHomeLink = styled(Link)`
   text-decoration: none;
 `
-export const StyledLogo = styled(Logo)`
+const StyledLogo = styled(Logo)`
   height: 5rem;
   fill: var(--title-color);
 
@@ -32,7 +34,7 @@ export const StyledLogo = styled(Logo)`
     fill: var(--primary-color);
   }
 `
-export const StyledNav = styled.nav`
+const StyledNav = styled.nav`
   flex: 1;
   height: 100%;
   display: none;
@@ -51,7 +53,7 @@ export const StyledNav = styled.nav`
     }
   }
 `
-export const StyledNavLink = styled(Link)`
+const StyledNavLink = styled(Link)`
   position: relative;
   margin: 0 1rem;
   text-decoration: none;
@@ -73,3 +75,31 @@ export const StyledNavLink = styled(Link)`
     right: 0;
   }
 `
+
+const Header = ({ menuLinks }) => (
+  <StyledHeader>
+    <StyledContainer>
+      <StyledHomeLink title="logo" to="/">
+        <StyledLogo />
+      </StyledHomeLink>
+      <StyledNav>
+        {menuLinks.map((link, index) => (
+          <StyledNavLink
+            key={link.name}
+            to={link.link}
+            activeClassName="active"
+          >
+            <StyledIndexNumber>{`${String(index + 1).padStart(
+              2,
+              '0'
+            )}.`}</StyledIndexNumber>
+            {link.name}
+          </StyledNavLink>
+        ))}
+      </StyledNav>
+      {/* <SocialIcons icons={socialIconList} /> */}
+    </StyledContainer>
+  </StyledHeader>
+)
+
+export default Header

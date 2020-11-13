@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
-import { StyledH1, StyledH2 } from '../_shared/styled-headings'
-import Code from '../Code'
-import clientConfig from '../../../client-config'
+import { StyledH1, StyledH2 } from './_shared/styled-headings'
+import Code from './Code'
+import clientConfig from '../../client-config'
 
 const serializers = {
   types: {

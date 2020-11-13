@@ -22,6 +22,7 @@ const StyledProjectTitle = styled(StyledH1)`
 const StyledProjectContent = styled.div`
   padding: 2rem;
   width: 100%;
+  margin: 0 auto;
   background: var(--bg-content-color);
   border-radius: var(--radius);
   border-top-left-radius: 0;
