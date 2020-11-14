@@ -76,12 +76,10 @@ const GlobalStyles = createGlobalStyle`
 	}
 
  img {
-
-	 display: inline-block;
+	display: inline-block;
   max-width: 100%;
   height: auto;
  }
-
 
 `
 
