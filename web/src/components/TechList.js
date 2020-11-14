@@ -12,7 +12,7 @@ const StyledTag = styled.span`
   align-items: center;
   white-space: nowrap;
   color: var(--body-color);
-  margin: 0 2rem 1rem 0;
+  /* margin: 0 2rem 1rem 0; */
 
   & > svg {
     color: var(--primary-color);

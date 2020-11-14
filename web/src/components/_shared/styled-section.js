@@ -2,14 +2,12 @@ import styled from 'styled-components'
 
 export const StyledSection = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: column;
   margin: 0 auto;
-  width: 95%;
-  padding: 6rem 0;
+  padding: 6rem 2rem;
   max-width: 1000px;
-  margin-bottom: 60px;
 `
 
 export const StyledFullHeightSection = styled(StyledSection)`

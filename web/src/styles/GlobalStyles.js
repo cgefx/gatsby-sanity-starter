@@ -43,10 +43,10 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
   html {
-		font-size: 62.5%; // 1rem = 10px
+		${'' /* font-size: 62.5%; // 1rem = 10px */}
   }
   body {
-		font-size: 2rem;
+		${'' /* font-size: 1.6rem; */}
 		background-color: var(--bg-color);
 		color: var(--body-color);
     -webkit-font-smoothing: antialiased;
@@ -75,7 +75,12 @@ const GlobalStyles = createGlobalStyle`
 		}
 	}
 
+ img {
 
+	 display: inline-block;
+  max-width: 100%;
+  height: auto;
+ }
 
 
 `

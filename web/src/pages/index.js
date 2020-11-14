@@ -9,7 +9,7 @@ import FeaturedProjects from '../components/FeaturedProjects'
 const IndexPage = ({ data }) => (
   <>
     <SEO title="Home" />
-    <Hero />
+    {/* <Hero /> */}
     <About />
     <FeaturedProjects projects={data.featuredProjects.nodes} />
     <Contact />

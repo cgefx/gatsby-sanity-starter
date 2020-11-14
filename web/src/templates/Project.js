@@ -9,20 +9,20 @@ import BlockContent from '../components/BlockContent'
 import { StyledImageContainer } from '../components/_shared/styled-image-container'
 
 const StyledProjectSection = styled(StyledSection)`
-  min-height: calc(100vh - var(--header-height));
+  /* min-height: calc(100vh - var(--header-height));
 
   & > .gatsby-image-wrapper {
     width: 100%;
-  }
+  } */
 `
 const StyledProjectTitle = styled(StyledH1)`
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 `
 
 const StyledProjectContent = styled.div`
-  padding: 2rem;
-  width: 100%;
+  padding: 0 2rem;
   margin: 0 auto;
+  max-width: 825px;
   background: var(--bg-content-color);
   border-radius: var(--radius);
   border-top-left-radius: 0;
@@ -34,10 +34,10 @@ export default function ProjectPage({ data: { project } }) {
   const coverImage = project.coverImage ? project.coverImage.asset.fluid : null
   return (
     <StyledProjectSection>
-      <StyledImageContainer>
-        {coverImage && <Img fluid={coverImage} />}
-      </StyledImageContainer>
       <StyledProjectContent>
+        <StyledImageContainer>
+          {coverImage && <Img fluid={coverImage} />}
+        </StyledImageContainer>
         <StyledProjectTitle>{project.title}</StyledProjectTitle>
         {project._rawBody && <BlockContent blocks={project._rawBody || []} />}
       </StyledProjectContent>

@@ -23,22 +23,6 @@ const Container = styled.div`
   }
 `
 
-const Heading = styled.h4`
-  font-size: 20px;
-  text-align: left;
-  font-weight: bold;
-  border: none;
-  margin: 0 0 1.5rem 0;
-  transition: 0.5s;
-
-  &:focus {
-    outline: none;
-  }
-  @media (max-width: 767px) {
-    font-size: 18px;
-  }
-`
-
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, minmax(10rem, 15rem));
@@ -64,7 +48,7 @@ const IconWrapper = styled.div`
 `
 
 const Text = styled.p`
-  font-size: 16px;
+  /* font-size: 16px; */
   text-transform: capitalize;
   font-weight: bold;
   margin-left: 0.8rem;
