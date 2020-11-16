@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
 			--bright-blue: #00fff9;
 			--pink: #ff00c1;
 			--radius: 6px;
-			--space: 7rem;
+			--space: 1.6rem;
 			--header-height: 110px;
 			--content-width: 860px;
 			--transition-fast: 0.2s;
