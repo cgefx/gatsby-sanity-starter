@@ -6,7 +6,7 @@ export const StyledSection = styled.section`
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
-  padding: 6rem 2rem;
+  padding: 1.6rem;
   max-width: 1000px;
 `
 
