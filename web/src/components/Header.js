@@ -6,22 +6,20 @@ import Logo from '../assets/logo.svg'
 import { mq } from './_shared/media'
 
 const StyledHeader = styled.header`
-  height: var(--header-height);
-  flex-shrink: 0;
+  /* height: var(--header-height); */
   background-color: transparent;
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-left);
-  position: absolute;
-  z-index: 1;
+  padding: 2.4rem 0;
+  /* position: absolute; */
+  /* z-index: 1; */
   width: 100%;
 `
 const StyledContainer = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%;
-  padding: 0 calc((var(--space)));
+  max-width: 825px;
+  margin: 0 auto;
+  /* padding: 0 calc((var(--space))); */
 `
 const StyledHomeLink = styled(Link)`
   text-decoration: none;

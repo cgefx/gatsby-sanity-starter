@@ -16,14 +16,14 @@ const StyledFooter = styled.footer`
   background-color: var(--bg-content-color);
   padding: calc((var(--space) / 2));
   text-align: center;
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
 
   ${mq.gt.xs} {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
   ${mq.lt.md} {
-    margin-bottom: var(--header-height);
+    /* margin-bottom: var(--header-height); */
   }
 `
 const StyledSocialContainer = styled.div`
@@ -51,7 +51,7 @@ const StyledCopyright = styled.span`
 const StyledRotator = styled.div`
   ${flexCenter};
   margin: 1.6rem 0;
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
 
   & > span {
     margin-left: 0.5rem;

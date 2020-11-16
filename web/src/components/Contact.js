@@ -6,42 +6,22 @@ import { contentBox } from './_shared/styled-mixins'
 import { StyledH2 } from './_shared/styled-headings'
 import useForm from '../utils/useForm'
 
-const Gradient = styled.div`
-  border-radius: 1px;
-  height: 100%;
-  width: 100%;
-  --width: 2px;
-  clip-path: polygon(
-    0% 100%,
-    var(--width) 100%,
-    var(--width) var(--width),
-    calc(100% - var(--width)) var(--width),
-    calc(100% - var(--width)) calc(100% - var(--width)),
-    var(--width) calc(100% - var(--width)),
-    var(--width) 100%,
-    100% 100%,
-    100% 0%,
-    0% 0%
-  );
+const StyledContainer = styled.div`
   background: var(--gradient);
+  border-radius: var(--radius);
   background-size: 300% 300%;
   animation: ${gradientAnimation} 5s ease-in-out infinite;
-`
-
-const StyledContainer = styled.div`
-  ${contentBox}
-  padding: 1.6rem;
+  max-width: 825px;
+  margin: 0 auto;
   width: 100%;
+  padding: 1px;
 `
 
 const StyledForm = styled.form`
-  padding: 4rem;
-  width: 100%;
-  position: relative;
-  z-index: 5;
+  ${contentBox}
 `
 const InputElement = styled.div`
-  margin: 2rem 0;
+  margin: 1.6rem 0;
 `
 
 const Input = styled.input`
@@ -59,25 +39,6 @@ const Input = styled.input`
   }
   &.error {
     animation: ${ErrorInputAnimation} 1s forwards;
-  }
-`
-
-const Textarea = styled.textarea`
-  width: 100%;
-  background-color: var(--bg-content-color);
-  border: none;
-  padding: 1rem 0.5rem;
-  border-radius: 0;
-  color: var(--title-color);
-  transition: all 0.5s ease 0s;
-  min-height: 10rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-bottom: 1px solid var(--border-color);
-  height: 100px;
-  &:focus {
-    border-bottom: 1px solid var(--primary-color);
-    outline: none;
   }
 `
 
@@ -113,7 +74,6 @@ export default function Contact() {
   return (
     <StyledSection id="contact">
       <StyledContainer>
-        <Gradient />
         <StyledForm>
           <StyledH2>Get In Touch</StyledH2>
           <InputElement>
@@ -138,19 +98,7 @@ export default function Contact() {
               // className={`email ${this.check(this.state.email) ? "" : "error"}`}
             />
           </InputElement>
-          <InputElement>
-            <Textarea
-              type="textarea"
-              id="message"
-              name="message"
-              value={values.message}
-              onChange={updateValue}
-              placeholder="Message"
-              // className={`message ${
-              // 	this.check(this.state.message) ? "" : "error"
-              // }`}
-            />
-          </InputElement>
+
           <Submit>
             <span>Submit</span>
           </Submit>
