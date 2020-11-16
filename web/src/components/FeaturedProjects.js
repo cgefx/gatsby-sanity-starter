@@ -16,7 +16,6 @@ const StyledFeaturedProject = styled.article`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 7rem;
-  padding: 4rem 0;
 
   @media screen and (min-width: 960px) {
     grid-template-columns: repeat(2, 1fr);
@@ -40,7 +39,7 @@ const StyledLinkContainer = styled.section`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 10px 0;
+  /* margin: 10px 0; */
 
   & > a {
     display: flex;
@@ -54,7 +53,7 @@ const StyledLinkContainer = styled.section`
   }
 
   & svg {
-    margin: 0 0.5rem;
+    /* margin: 0 0.5rem; */
   }
 `
 
@@ -64,14 +63,14 @@ const StyledDescription = styled.section`
   padding: 1.6rem;
 
   p {
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
   }
 `
 
 const StyledArchiveContainer = styled.div`
   ${flexCenter};
   width: 100%;
-  margin-top: 2.5rem;
+  /* margin-top: 2.5rem; */
 `
 
 export default function FeaturedProjects({ projects }) {

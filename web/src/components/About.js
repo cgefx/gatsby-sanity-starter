@@ -4,14 +4,12 @@ import styled from 'styled-components'
 import SkillsGrid from './SkillsGrid'
 import { StyledSection } from './_shared/styled-section'
 import { StyledH1 } from './_shared/styled-headings'
-import { AnimatedShadow } from './_shared/animation'
 import { mq } from './_shared/media'
 
 const StyledAboutContainer = styled.article`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 5rem;
-  padding: 5rem 0;
 
   ${mq.gt.sm} {
     grid-template-columns: repeat(2, 1fr);
@@ -20,23 +18,14 @@ const StyledAboutContainer = styled.article`
 
 const ImageContainer = styled.div`
   border-radius: 20px;
-  overflow: hidden;
+  width: 100%;
   box-shadow: 0 28px 60px rgba(80, 115, 184, 0.5);
-  /* animation: ${AnimatedShadow} 10s infinite alternate; */
-  @media (max-width: 767px) {
+  /* @media (max-width: 767px) {
     margin-bottom: 5rem;
-  }
+  } */
 `
 
-const Image = styled.img`
-  max-width: 400px;
-  @media (max-width: 767px) {
-    max-width: 20rem;
-  }
-  @media (max-width: 1400px) {
-    max-width: 28rem;
-  }
-`
+const Image = styled.img``
 
 const Text = styled.p``
 

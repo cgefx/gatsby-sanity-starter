@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
 			--bright-blue: #00fff9;
 			--pink: #ff00c1;
 			--radius: 6px;
-			--space: 7rem;
+			--space: 1.6rem;
 			--header-height: 110px;
 			--content-width: 860px;
 			--transition-fast: 0.2s;
@@ -43,10 +43,10 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
   html {
-		font-size: 62.5%; // 1rem = 10px
+		${'' /* font-size: 62.5%; // 1rem = 10px */}
   }
   body {
-		font-size: 2rem;
+		${'' /* font-size: 1.6rem; */}
 		background-color: var(--bg-color);
 		color: var(--body-color);
     -webkit-font-smoothing: antialiased;
@@ -75,8 +75,11 @@ const GlobalStyles = createGlobalStyle`
 		}
 	}
 
-
-
+ img {
+	display: inline-block;
+  max-width: 100%;
+  height: auto;
+ }
 
 `
 

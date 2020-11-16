@@ -5,7 +5,7 @@ export const StyledH1 = styled.h1`
   width: 100%;
   position: relative;
   font-weight: 800;
-  margin: 20px 0;
+  /* margin: 20px 0; */
 
   /* &:first-letter {
     color: var(--primary-color);
@@ -28,10 +28,11 @@ export const StyledH1 = styled.h1`
 
 export const StyledH2 = styled.h2`
   color: var(--title-color);
-  margin: 20px 0;
-  position: relative;
+  /* margin: 20px 0; */
+  /* position: relative; */
+  border-bottom: 2px solid var(--border-color);
 
-  &:after {
+  /* &:after {
     background-color: var(--primary-color);
     content: '';
     position: absolute;
@@ -39,5 +40,5 @@ export const StyledH2 = styled.h2`
     left: 0;
     width: 30px;
     height: 2px;
-  }
+  } */
 `
