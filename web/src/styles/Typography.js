@@ -8,17 +8,12 @@ const Typography = createGlobalStyle`
 		line-height: 1.75;
 	}
 
-	p {
-		${'' /* margin-bottom: 1.25em; */}
-	}
-
-	${'' /* Tania from here on */}
   h1,
   h2,
   h3,
   h4,
   h5 {
-    margin: 0 0 1.5rem 0;
+    margin-bottom: 1rem;
     font-weight: 700;
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
@@ -47,7 +42,6 @@ const Typography = createGlobalStyle`
 
   h3 {
     font-size: 1.5rem;
-    font-weight: 600;
     margin-bottom: 1rem;
   }
 
@@ -57,7 +51,6 @@ const Typography = createGlobalStyle`
 
   h4 {
     font-size: 1.3rem;
-    font-weight: 500;
     margin-bottom: 1rem;
     padding-bottom: 0.25rem;
   }
@@ -102,7 +95,7 @@ const Typography = createGlobalStyle`
   table,
   blockquote {
     font-size: 1.05rem;
-    margin: 0 0 1.5rem 0;
+    margin-bottom: 1.5rem;
   }
 
   ul {
@@ -123,63 +116,6 @@ const Typography = createGlobalStyle`
       padding: 0 2rem;
     }
   }
-
-  ul li p {
-    margin: 0;
-  }
-
-  ul li ul {
-    padding-left: 1rem;
-    margin: 0;
-  }
-
-  ul li ul li {
-    margin: 0;
-  }
-
-  ol li ol {
-    margin-bottom: 0;
-  }
-
-${'' /* until here */}
-
-  h1,h2,h3,h4,h5 {
-		transition: color  var(--transition-slow);
-		color: var(--title-color);
-		${'' /* margin: 2.75rem 0 1rem; */}
-		${'' /* font-family: 'Poppins', sans-serif; */}
-		${'' /* font-weight: 600; */}
-		${'' /* line-height: 1.15; */}
-  }
-
-	h1 {
-		${'' /* margin-top: 0;
-		font-size: 1.802em; */}
-	}
-
-	h2 {
-		${'' /* font-size:  1.602em; */}
-	}
-
-	h3 {
-		${'' /* font-size: 1.424em; */}
-	}
-
-	h4 {
-		${'' /* font-size: 1.266em; */}
-	}
-
-	h5 {
-		${'' /* font-size: 1.125em; */}
-	}
-
-	small {
-		${'' /* font-size: 0.889em; */}
-	}
-
-	strong {
-		${'' /* font-weight: 600; */}
-	}
 `
 
 export default Typography
