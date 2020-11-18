@@ -14,7 +14,7 @@ const StyledProjectSection = styled(StyledSection)`
 const StyledProjectContent = styled.div`
   ${contentBox}
   background-color: var(--bg-color);
-  padding: 1.25rem;
+  padding: 0;
 `
 const ProjectMetaContainer = styled.div`
   margin-bottom: 3rem;
