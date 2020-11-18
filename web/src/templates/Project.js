@@ -10,18 +10,22 @@ import BlockContent from '../components/BlockContent'
 
 const StyledProjectSection = styled(StyledSection)`
   padding-top: 0;
-  max-width: 825px;
 `
 const StyledProjectContent = styled.div`
   ${contentBox}
+  background-color: var(--bg-color);
+  padding: 0;
 `
-const ProjectTitle = styled(StyledH1)`
-  margin-bottom: 2rem;
+const ProjectMetaContainer = styled.div`
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
 `
 
-const ProjectMetaContainer = styled.div`
+const ProjectTitle = styled(StyledH1)``
+
+const ProjectExcerpt = styled.div`
   margin-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
+  line-height: 1.4;
 `
 
 const ProjectDetails = styled.div`
@@ -35,6 +39,7 @@ const ProjectDetails = styled.div`
 
 const StyledDetailHeading = styled.h4`
   text-transform: uppercase;
+  color: var(--primary-color);
   font-size: 1rem;
   font-weight: bold;
 `
@@ -43,15 +48,18 @@ const StyledDetailText = styled.p`
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 `
+
 const Column = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-bottom: 1.6rem;
 `
 
-const StyledLinkContainer = styled.section`
+const StyledLinkContainer = styled.div`
   display: flex;
-  margin: 10px 0;
+  align-items: center;
   & > a {
     display: flex;
     justify-content: center;
@@ -61,8 +69,8 @@ const StyledLinkContainer = styled.section`
       color: var(--primary-color);
     }
   }
-  & svg {
-    margin: 0 0.5rem;
+  & svg:first-of-type {
+    margin-right: 0.5rem;
   }
 `
 
@@ -76,6 +84,9 @@ export default function ProjectPage({ data: { project } }) {
       <StyledProjectContent>
         <ProjectMetaContainer>
           <ProjectTitle>{project.title}</ProjectTitle>
+          <ProjectExcerpt>
+            <small>{project.excerpt}</small>
+          </ProjectExcerpt>
           <ProjectDetails>
             <Column>
               <StyledDetailHeading>Stack</StyledDetailHeading>

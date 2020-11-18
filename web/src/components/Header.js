@@ -8,24 +8,21 @@ import { mq } from './_shared/media'
 const StyledHeader = styled.header`
   /* height: var(--header-height); */
   background-color: transparent;
-  padding: 2.4rem 0;
-  /* position: absolute; */
-  /* z-index: 1; */
+  /* padding: 2rem 0; */
   width: 100%;
 `
 const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 825px;
+  max-width: var(--content-width);
   margin: 0 auto;
-  /* padding: 0 calc((var(--space))); */
 `
 const StyledHomeLink = styled(Link)`
   text-decoration: none;
 `
 const StyledLogo = styled(Logo)`
-  height: 5rem;
+  height: 3rem;
   fill: var(--title-color);
 
   &:hover path.level-2 {
@@ -36,7 +33,7 @@ const StyledNav = styled.nav`
   flex: 1;
   height: 100%;
   display: none;
-
+  /* display: flex; */
   ${mq.gt.sm} {
     display: flex;
     align-items: stretch;
@@ -53,7 +50,7 @@ const StyledNav = styled.nav`
 `
 const StyledNavLink = styled(Link)`
   position: relative;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   text-decoration: none;
   display: flex;
   align-items: center;
